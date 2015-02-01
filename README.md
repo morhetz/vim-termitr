@@ -1,6 +1,10 @@
 # vim-termitr
 Some vim terminal integration
 
+## Features
+
+to be described
+
 ## Installation
 
 - Pathogen
