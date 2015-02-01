@@ -22,7 +22,7 @@ Source `termitr.sh` at .bashrc//.zshrc//.profile
 `source "$HOME/.vim/bundle/vim-termitr/termitr.sh"`  
 where `$HOME/.vim/bundle/` is your preferred plugin manager bundles installation path
 
-Put lines to the `.tmux.conf`  
+Put these lines to the `.tmux.conf`  
 `set-option -g default-terminal screen-256color-bce`
 
 ## Recommended addons
