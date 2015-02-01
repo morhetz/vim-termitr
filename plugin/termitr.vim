@@ -35,9 +35,13 @@ if $COLORTERM == 'rxvt'
    if $TERM =~# '\v^screen(-\d*color|-bce|-it|-s)*$'
       let &t_SI = "\ePtmux;\e\e[" . g:termitr_insert_cursor . " q\e\\"
       let &t_EI = "\ePtmux;\e\e[" . g:termitr_normal_cursor . " q\e\\"
+      " reset on quit
+      autocmd VimLeave * silent !echo -ne "\033Ptmux;\033\033[2 q\033\\"
    else
       let &t_SI = "\e[" . g:termitr_insert_cursor . " q"
-      let &t_EI = "\e[" . g:termitr_normal_cursor ." q"
+      let &t_EI = "\e[" . g:termitr_normal_cursor . " q"
+      " reset on quit
+      autocmd VimLeave * silent !echo -ne "\033[2 q"
    endif
 endif
 
