@@ -3,7 +3,7 @@ Some vim terminal integration
 
 ## Features
 
-to be described
+*to be described*
 
 ## Installation
 
@@ -32,3 +32,11 @@ Put these lines to the `.tmux.conf`
 ## Recommended addons
 
 [vim-fixkey](https://github.com/drmikehenry/vim-fixkey)
+
+## Recommended terminal
+
+urxvt with some patches -> *point to repo with patchset*
+
+## ToDo
+
+FocusLost//FocusGained events with urxvt
