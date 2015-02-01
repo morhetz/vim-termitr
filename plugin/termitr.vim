@@ -10,6 +10,15 @@ if has('gui_running')
   finish
 endif
 
+if !exists('g:termitr_insert_cursor')
+   let g:termitr_insert_cursor=5
+endif
+
+if !exists('g:termitr_normal_cursor')
+   let g:termitr_normal_cursor=1
+endif
+
+
 if $TERM_ITALICS != 'true'
    let g:gruvbox_italic=0
 else
@@ -24,11 +33,11 @@ endif
 if $COLORTERM == 'rxvt'
    " normal//input cursor shape
    if $TERM =~# '\v^screen(-\d*color|-bce|-it|-s)*$'
-      let &t_SI = "\ePtmux;\e\e[5 q\e\\"
-      let &t_EI = "\ePtmux;\e\e[1 q\e\\"
+      let &t_SI = "\ePtmux;\e\e[" . g:termitr_insert_cursor . " q\e\\"
+      let &t_EI = "\ePtmux;\e\e[" . g:termitr_normal_cursor . " q\e\\"
    else
-      let &t_SI = "\e[5 q"
-      let &t_EI = "\e[1 q"
+      let &t_SI = "\e[" . g:termitr_insert_cursor . " q"
+      let &t_EI = "\e[" . g:termitr_normal_cursor ." q"
    endif
 endif
 
