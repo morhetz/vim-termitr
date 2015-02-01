@@ -12,6 +12,9 @@ Some vim terminal integration
 - vim-plug
   + Add `Plug 'morhetz/vim-termitr'` to your .vimrc and run `:PlugInstall`
 
+Check for gnome-256color terminfo to be installed. Install it on Deb with:  
+`> sudo apt-get install ncurses-term`
+
 Build local terminfos  
 `> tic termitr.terminfo`
 
