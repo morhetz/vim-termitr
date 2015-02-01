@@ -40,3 +40,7 @@ urxvt with some patches -> *point to repo with patchset*
 ## ToDo
 
 FocusLost//FocusGained events with urxvt
+
+## Credits
+
+[Kevin Goodsell](https://gist.github.com/KevinGoodsell/744284)
