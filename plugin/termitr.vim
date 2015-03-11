@@ -3,7 +3,7 @@
 " Description: Some vim terminal integration
 " Author: morhetz <morhetz@gmail.com>
 " Source: https://github.com/morhetz/termitr
-" Last Modified: 2 Feb 2015
+" Last Modified: 12 Mar 2015
 " -----------------------------------------------------------------------------
 
 if has('gui_running')
@@ -19,9 +19,7 @@ if !exists('g:termitr_normal_cursor')
 endif
 
 
-if $TERM_ITALICS != 'true'
-   let g:gruvbox_italic=0
-else
+if $TERM_ITALICS == 'true'
    " setting gnome-256color drops mouse
    set ttymouse=xterm2
 
